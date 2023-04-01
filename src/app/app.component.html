@@ -2,14 +2,13 @@
 <h1>Mathis Zerari</h1>
 <h2>🌊</h2>
 
-<h2 (click)="selectSocial(social[0])"> {{social[0].media}} </h2>
-<a href="{{social[0].link}}" target="_blank">{{social[0].arobase}}</a>
+<div *ngFor="let socialmedia of social">
+    <h2>{{ socialmedia.media }}</h2>
+    <a href="{{socialmedia.link}}" target="_blank">
+        {{ socialmedia.arobase }}
+    </a>
+</div>
 
-<h2 (click)="selectSocial(social[1])"> {{social[1].media}} </h2>
-<a href="{{social[1].link}}" target="_blank">{{social[1].arobase}}</a>
-
-<h2 (click)="selectSocial(social[2])"> {{social[2].media}} </h2>
-<a href="{{social[2].link}}" target="_blank">{{social[2].arobase}}</a>
-
-<h2 (click)="selectSocial(social[3])"> {{social[3].media}} </h2>
-<a href="{{social[3].link}}" target="_blank">{{social[3].arobase}}</a>
+<h3 *ngIf="arrowright">
+    ahhahahahahahhahahhah
+</h3>
