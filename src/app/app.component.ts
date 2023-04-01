@@ -14,7 +14,6 @@ export class AppComponent implements OnInit {
   }
 
   selectSocial(social: Social) {
-    console.log(`Vous allez être redirigé vers ${social.media} via ${social.link}`);
     window.open(social.link, '_blank');
   }
 }
