@@ -6,11 +6,11 @@ export const SOCIALMEDIAS: Social[] = [
         arobase: "mathiszerari",
         link: "https://twitter.com/mathiszerari"
     },
-    {
-        media: "Instagram",
-        arobase: "mathiszerari",
-        link: "https://instagram.com/mathiszerari"
-    },
+    // {
+    //     media: "Instagram",
+    //     arobase: "mathiszerari",
+    //     link: "https://instagram.com/mathiszerari"
+    // },
     {
         media: "GitHub",
         arobase: "mathiszerari",

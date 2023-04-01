@@ -1,10 +1,14 @@
 <img src="assets/newlogo.png" alt="" style="width: 75px">
-<h1>Mathis Zerari</h1>
 <h2>🌊</h2>
+<h1 class="center">Mathis Zerari</h1>
 
-<div *ngFor="let socialmedia of social">
-    <h2>{{ socialmedia.media }}</h2>
-    <a href="{{socialmedia.link}}" target="_blank">{{ socialmedia.arobase }}</a>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let socialmedia of social" class="col m3 s10">
+            <h4>{{ socialmedia.media }}</h4>
+            <a href="{{socialmedia.link}}" target="_blank">{{ socialmedia.arobase }}</a>
+        </div>
+    </div>
 </div>
 
 <h3 *ngIf="arrowright">
