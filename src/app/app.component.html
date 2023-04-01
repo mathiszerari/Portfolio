@@ -4,9 +4,7 @@
 
 <div *ngFor="let socialmedia of social">
     <h2>{{ socialmedia.media }}</h2>
-    <a href="{{socialmedia.link}}" target="_blank">
-        {{ socialmedia.arobase }}
-    </a>
+    <a href="{{socialmedia.link}}" target="_blank">{{ socialmedia.arobase }}</a>
 </div>
 
 <h3 *ngIf="arrowright">
