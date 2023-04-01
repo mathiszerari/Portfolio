@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #171717;
+} 
+h2 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.header {
+    gap: 1rem;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    font-style: normal;
+}
+
+.logo {
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.emoji {
+    --tw-bg-opacity: 1;
+    background-color: rgb(23 23 23/var(--tw-bg-opacity));
+    font-size: .875rem;
+    line-height: 1.25rem;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    margin-left: 2.75rem;
+    margin-top: -1.5rem;
+    position: absolute;
+    border-radius: 9999px;
+}
+
+.titles {
+    flex-direction: column;
+    display: flex;
+}
+h1 {
+    margin: 0;
+    font-size: inherit;
+    tab-size: 4;
+    font-weight: inherit;
+}
+.status{
+    color: hsla(0,0%,100%,.4);
+    font-size: inherit;
+    line-height: inherit;
+    tab-size: 4;
+    margin: 0;
+}

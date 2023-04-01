@@ -1,19 +1,31 @@
-<img src="assets/newlogo.png" alt="" style="width: 75px">
-<h2>🌊</h2>
-<h1 class="center">Mathis Zerari</h1>
+<html>
+    <body appCss>
+        <div class="container">
 
-<div class="container">
-    <div class="row">
-        <div *ngFor="let socialmedia of social" class="col m3 s10">
-            <h4>{{ socialmedia.media }}</h4>
-            <a href="{{socialmedia.link}}" target="_blank">{{ socialmedia.arobase }}</a>
+            <div class="header">
+                <div class="logo">
+                    <img src="assets/newlogo.png" alt="" style="width: 75px">
+                    <div class="emoji">🌊</div>
+                </div>
+                <div class="titles">
+                    <h1 class="name">Mathis Zerari</h1>
+                    <p class="status">Development engineer in France</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div *ngFor="let socialmedia of social" class="col m3 s10">
+                    <h4>{{ socialmedia.media }}</h4>
+                    <a href="{{socialmedia.link}}" target="_blank">{{ socialmedia.arobase }}</a>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<h3 *ngIf="arrowright || arrowdown">
-    →→→→→
-</h3>
-<h3 *ngIf="arrowleft || arrowup">
-    ←←←←←
-</h3>
+        <h3 *ngIf="arrowright || arrowdown">
+            →→→→→
+        </h3>
+        <h3 *ngIf="arrowleft || arrowup">
+            ←←←←←
+        </h3>
+    </body>
+</html>
