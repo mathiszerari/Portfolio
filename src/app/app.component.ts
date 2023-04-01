@@ -11,10 +11,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     console.table(this.social);
-    this.selectSocial(this.social[0]);
   }
 
   selectSocial(social: Social) {
-    console.log(`Vous allez être redirigé vers : ${social.media}`);
+    console.log(`Vous allez être redirigé vers ${social.media} via ${social.link}`);
+    window.open(social.link, '_blank');
   }
 }
