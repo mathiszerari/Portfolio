@@ -1,10 +1,12 @@
+<!--  on commence le fichier HTML par la balise HTML -->
 <html>
+    <!-- on donne le body avec le nom de la directive appCss -->
     <body appCss>
+        <!-- on créer une div container -->
         <div class="container">
-
             <div class="header">
                 <div class="logo">
-                    <img src="assets/newlogo.png" alt="" style="width: 75px">
+                    <img src="assets/newlogo.png" style="width: 75px">
                     <div class="emoji">🌊</div>
                 </div>
                 <div class="titles">
@@ -14,13 +16,20 @@
             </div>
 
             <div class="row">
+                <!-- dans un row on boucle avec ngFor qui boucle sur des éléments HTML, ici pour chaque réseaux présent 
+                    dans le tableau social et la classe correspond aux dimensions que prendront chaque div : lorsque la taille de l'écran
+                    sera moyen ce sera 3/12 et pour un petit de 10 (pour prendre toute la rangée)-->
                 <div *ngFor="let socialmedia of social" class="col m3 s10">
+                    <!-- ici on place dans un h4 la valeur contenue dans la mock au champ media -->
                     <h4>{{ socialmedia.media }}</h4>
+                    <!-- on place dans un a le liens présent dans la mock au champ link, que l'on ouvrira dans un nouvel onglet au click
+                    on place le arobase entre les balises et le link en href -->
                     <a href="{{socialmedia.link}}" target="_blank">{{ socialmedia.arobase }}</a>
                 </div>
             </div>
         </div>
 
+        <!-- ici on place la condition des evennements de click sur les flèches qui permettra à sélectionner les options -->
         <h3 *ngIf="arrowright || arrowdown">
             →→→→→
         </h3>
