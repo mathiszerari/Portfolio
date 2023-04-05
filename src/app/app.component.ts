@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 // on importe la mock 
 import { SOCIALMEDIAS } from './mock-social';
 // on importe la class social qui définit quel champs aura la mock et le type de données en entrée
@@ -42,21 +42,5 @@ export class AppComponent {
     this.arrowleft = false;
   }
 
-  @HostListener('document:keydown.arrowup', ['$event'])
-  onKeyDownup(event: KeyboardEvent) {
-    this.arrowup = true;
-  }
-  @HostListener('document:keyup.arrowup', ['$event'])
-  onKeyUpup(event: KeyboardEvent) {
-    this.arrowup = false;
-  }
-
-  @HostListener('document:keydown.arrowdown', ['$event'])
-  onKeyDowndown(event: KeyboardEvent) {
-    this.arrowdown = true;
-  }
-  @HostListener('document:keyup.arrowdown', ['$event'])
-  onKeyUpdown(event: KeyboardEvent) {
-    this.arrowdown = false;
-  }
+  @ViewChild('moreButton', { static: true }) moreButton: ElementRef;
 }

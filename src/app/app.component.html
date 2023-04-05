@@ -38,18 +38,30 @@
             </div>
             <div class="aboutme" id="test">
                 <p class="subtitle">About me</p>
-                <p>Je suis née en France en 2003 autour de Paris, 
+                <p>Je suis né en France en 2003 autour de Paris, 
                     depuis 2020 je code des sites web et 
                     j'apprends de nouvelles technologies</p>
             </div>
+
+            <nav class="navigation">
+                <div class="navbar">
+                    <button class="more" #moreButton [ngStyle]="{'background-color': arrowright ? 'red' : 'blue'}">
+                        <ng-container *ngIf="!arrowright">
+                          <!-- contenu HTML par défaut -->
+                          +
+                        </ng-container>
+                        <ng-container *ngIf="arrowright">
+                          <!-- contenu HTML alternatif -->
+                          -
+                        </ng-container>
+                      </button>                
+                </div>
+            </nav>
         </div>
 
-        <!-- ici on place la condition des evennements de click sur les flèches qui permettra à sélectionner les options -->
-        <h3 *ngIf="arrowright || arrowdown">
-            →→→→→
-        </h3>
         <h3 *ngIf="arrowleft || arrowup">
             ←←←←←
         </h3>
     </body>
 </html>
+  
