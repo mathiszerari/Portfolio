@@ -86,6 +86,7 @@ h1 {
 }
 .col {
     margin-top: 1rem;
+    width: 100%;
 }
 a {
     color: hsla(0,0%,100%,.8);

@@ -11,7 +11,7 @@
                 </div>
                 <div class="titles">
                     <h1 class="name">Mathis Zerari</h1>
-                    <p class="status">Development engineer in France</p>
+                    <p class="status">Development Engineer in France</p>
                 </div>
             </div>
 
@@ -20,7 +20,7 @@
                 <!-- dans un row on boucle avec ngFor qui boucle sur des éléments HTML, ici pour chaque réseaux présent 
                     dans le tableau social et la classe correspond aux dimensions que prendront chaque div : lorsque la taille de l'écran
                     sera moyen ce sera 3/12 et pour un petit de 10 (pour prendre toute la rangée)-->
-                <div *ngFor="let socialmedia of social" [ngClass]="socialmedia.media | lowercase"  class="col m3 s10 div">
+                <div *ngFor="let socialmedia of social" [ngClass]="socialmedia.media | lowercase"  class="col m3 s12 div">
                     <span>
                         <!-- ici on place dans un h4 la valeur contenue dans la mock au champ media -->
                         <p class="text-quarternary">{{ socialmedia.media }}</p>
@@ -33,6 +33,14 @@
                         </a>
                     </span>
                 </div>
+
+                
+            </div>
+            <div class="aboutme" id="test">
+                <p class="subtitle">About me</p>
+                <p>Je suis née en France en 2003 autour de Paris, 
+                    depuis 2020 je code des sites web et 
+                    j'apprends de nouvelles technologies</p>
             </div>
         </div>
 
