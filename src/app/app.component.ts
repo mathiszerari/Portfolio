@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 // on importe la mock 
 import { SOCIALMEDIAS } from './mock-social';
 // on importe la class social qui définit quel champs aura la mock et le type de données en entrée
@@ -21,6 +21,16 @@ export class AppComponent {
   arrowdown: boolean = false;
   arrowleft: boolean = false;
   arrowup: boolean = false;
+  keyesc: boolean = false;
+  un: boolean = false;
+  deux: boolean = false;
+  trois: boolean = false;
+
+  @ViewChild('navbar', { static: true }) navbar: ElementRef;
+  @ViewChild('morebtn', { static: true }) morebtn: ElementRef;
+  @ViewChild('homebtn', { static: true }) homebtn: ElementRef;
+  @ViewChild('darkbtn', { static: true }) darkbtn: ElementRef;
+  @ViewChild('plumebtn', { static: true }) plumebtn: ElementRef;
 
   // on set un host listener comme un event listener 
   @HostListener('document:keydown.arrowright', ['$event'])
@@ -28,13 +38,19 @@ export class AppComponent {
     // on set le boolean arrowright à true
     if (!this.arrowright) {
       this.arrowright = true;
-      this.deployed = true;
-      console.log('deployed');
+      this.un = true;
+      
     }
-    else if (this.arrowright){
-      this.arrowright = false;
-      this.deployed = false;
-      console.log('replied');
+    else if (this.arrowright && this.un) {
+      // this.arrowright = false;
+      this.un = false;
+      this.deux = true;
+    }
+    else if (this.arrowright && this.deux) {
+      // this.arrowright = false;
+      this.un = false;
+      this.deux = false;
+      this.trois = true;
     }
   }
 
@@ -52,5 +68,16 @@ export class AppComponent {
     }
   }
 
-  @ViewChild('moreButton', { static: true }) moreButton: ElementRef;
+  @HostListener('document:keydown.esc', ['$event'])
+  onKeyDownEsc(event: KeyboardEvent) {
+    if (!this.keyesc) {
+      this.keyesc = true;
+      console.log('esc');
+      
+    }
+    else if (this.keyesc){
+      this.keyesc = false;
+      console.log('esc no more');
+    }
+  }
 }

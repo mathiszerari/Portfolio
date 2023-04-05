@@ -44,19 +44,28 @@
             </div>
 
             <nav class="navigation">
-                <div class="navbar" #moreButton>
-                    <ng-container *ngIf="!deployed">
-                        <!-- contenu HTML par défaut -->
-                        
-                        <button class="more">+</button>
+                <div class="navbar" #navbar>
+                    <ng-container *ngIf="!un && !deux && !trois">
+                        <button class="more" #morebtn>+</button>
                     </ng-container>
-                    <ng-container *ngIf="deployed">
-                        <!-- contenu HTML alternatif -->
-                        <button class="more">+</button>
-                        <button class="home">home</button>
-                        <button class="dark">dark</button>
-                        <button class="plume">plume</button>
-                    </ng-container>           
+                    <ng-container *ngIf="un">
+                        <button class="more" #morebtn>+</button>
+                        <button class="home" #homebtn style="height: 2rem">home</button>
+                        <button class="dark" #darkbtn>dark</button>
+                        <button class="plume" #plumebtn>plume</button>
+                    </ng-container>
+                    <ng-container *ngIf="deux">
+                        <button class="more" #morebtn>+</button>
+                        <button class="home" #homebtn>home</button>
+                        <button class="dark" #darkbtn style="height: 2rem">dark</button>
+                        <button class="plume" #plumebtn>plume</button>
+                    </ng-container>
+                    <ng-container *ngIf="trois">
+                        <button class="more" #morebtn>+</button>
+                        <button class="home" #homebtn>home</button>
+                        <button class="dark" #darkbtn>dark</button>
+                        <button class="plume" #plumebtn style="height: 2rem">plume</button>
+                    </ng-container>
                 </div>
             </nav>
         </div>
