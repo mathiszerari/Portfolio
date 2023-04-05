@@ -11,7 +11,7 @@ export class CssDirective {
   constructor(private el: ElementRef) {
     this.setBackground('#171717');
     this.setColor('#FFFFFF');
-    this.setMargin('6rem 0');
+    this.setMargin('1rem 0');
    }
 
   // on dit que l'on va définir un background donc en string pour la couleur c'est un string

@@ -8,8 +8,8 @@ h2 {
     font-weight: inherit;
 }
 .container {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
     padding: 1rem;
 }
 
@@ -63,4 +63,49 @@ h1 {
     line-height: inherit;
     tab-size: 4;
     margin: 0;
+}
+.row {
+    gap: 1rem;
+}
+.subtitle {
+    color: hsla(0,0%,100%,.6);
+    margin: 0;
+    display: block;
+    margin-top: 4rem;
+}
+.twitter {
+    margin-top: 1rem;
+}
+.row .col {
+    padding: 0;
+}
+.text-quarternary {
+    color: hsla(0,0%,100%,.4);
+    margin: 0;
+    display: block;
+}
+.col {
+    margin-top: 1rem;
+}
+a {
+    color: hsla(0,0%,100%,.8);
+    font-size: 16px;
+}
+p {
+    font-size: 16px;
+    margin: 0;
+}
+.w-3 {
+    width: 0.85rem;
+}
+
+.h-3 {
+    height: 0.85rem;
+}
+.inline-block {
+    display: inline-block;
+}
+svg {
+    vertical-align: middle;
+    cursor: pointer;
 }
