@@ -44,24 +44,22 @@
             </div>
 
             <nav class="navigation">
-                <div class="navbar">
-                    <button class="more" #moreButton [ngStyle]="{'background-color': arrowright ? 'red' : 'blue'}">
-                        <ng-container *ngIf="!arrowright">
-                          <!-- contenu HTML par défaut -->
-                          +
-                        </ng-container>
-                        <ng-container *ngIf="arrowright">
-                          <!-- contenu HTML alternatif -->
-                          -
-                        </ng-container>
-                      </button>                
+                <div class="navbar" #moreButton>
+                    <ng-container *ngIf="!deployed">
+                        <!-- contenu HTML par défaut -->
+                        
+                        <button class="more">+</button>
+                    </ng-container>
+                    <ng-container *ngIf="deployed">
+                        <!-- contenu HTML alternatif -->
+                        <button class="more">+</button>
+                        <button class="home">home</button>
+                        <button class="dark">dark</button>
+                        <button class="plume">plume</button>
+                    </ng-container>           
                 </div>
             </nav>
         </div>
-
-        <h3 *ngIf="arrowleft || arrowup">
-            ←←←←←
-        </h3>
     </body>
 </html>
   

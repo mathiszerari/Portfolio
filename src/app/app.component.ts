@@ -16,6 +16,7 @@ export class AppComponent {
   social: Social[] = SOCIALMEDIAS;
 
   // ici je crée la condition si l'une des flèches est pressée
+  deployed: boolean = false;
   arrowright: boolean = false;
   arrowdown: boolean = false;
   arrowleft: boolean = false;
@@ -25,21 +26,30 @@ export class AppComponent {
   @HostListener('document:keydown.arrowright', ['$event'])
   onKeyDownRight(event: KeyboardEvent) {
     // on set le boolean arrowright à true
-    this.arrowright = true;
-  }
-  @HostListener('document:keyup.arrowright', ['$event'])
-  onKeyUpRight(event: KeyboardEvent) {
-    // lorsque l'on relache la touche on set le booleen en false
-    this.arrowright = false;
+    if (!this.arrowright) {
+      this.arrowright = true;
+      this.deployed = true;
+      console.log('deployed');
+    }
+    else if (this.arrowright){
+      this.arrowright = false;
+      this.deployed = false;
+      console.log('replied');
+    }
   }
 
   @HostListener('document:keydown.arrowleft', ['$event'])
   onKeyDownLeft(event: KeyboardEvent) {
-    this.arrowleft = true;
-  }
-  @HostListener('document:keyup.arrowleft', ['$event'])
-  onKeyUpLeft(event: KeyboardEvent) {
-    this.arrowleft = false;
+    if (!this.arrowleft) {
+      this.arrowleft = true;
+      this.deployed = true;
+      console.log('deployed');
+    }
+    else if (this.arrowleft){
+      this.arrowleft = false;
+      this.deployed = false;
+      console.log('replied');
+    }
   }
 
   @ViewChild('moreButton', { static: true }) moreButton: ElementRef;
