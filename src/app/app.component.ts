@@ -40,14 +40,23 @@ export class AppComponent {
       this.arrowright = true;
       this.un = true;
       this.keyesc = false;
+      console.log('a');
     }
     else if (this.arrowright && this.un) {
       // this.arrowright = false;
       this.un = false;
       this.deux = true;
+      this.trois = false;
       this.keyesc = false;
     }
     else if (this.arrowright && this.deux) {
+      // this.arrowright = false;
+      this.un = false;
+      this.deux = false;
+      this.trois = true;
+      this.keyesc = false;
+    }
+    else if (this.arrowright && this.trois) {
       // this.arrowright = false;
       this.un = false;
       this.deux = false;
@@ -63,12 +72,11 @@ export class AppComponent {
       this.arrowleft = true;
     }
     else if (this.arrowleft && this.un) {
-      // this.arrowleft = false;
+      this.arrowleft = false;
+      this.arrowright = false;
       this.un = false;
       this.deux = false;
       this.keyesc = false;
-      this.arrowleft = false;
-      
     }
     else if (this.arrowleft && this.deux) {
       // this.arrowleft = false;
@@ -83,7 +91,6 @@ export class AppComponent {
       this.deux = true;
       this.trois = false;
       this.keyesc = false;
-      this.arrowright = false;
     }
   }
 
