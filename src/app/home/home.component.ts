@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SOCIALMEDIAS } from '../mock-social';
+import { Social } from '../social';
 
 @Component({
   selector: 'app-home',
@@ -7,5 +9,6 @@ import { Component } from '@angular/core';
   ]
 })
 export class HomeComponent {
+  social: Social[] = SOCIALMEDIAS;
 
 }
