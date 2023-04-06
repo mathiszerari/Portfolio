@@ -45,22 +45,22 @@
 
             <nav class="navigation">
                 <div class="navbar" #navbar>
-                    <ng-container *ngIf="!un && !deux && !trois">
+                    <ng-container *ngIf="(!un && !deux && !trois) || keyesc">
                         <button class="more" #morebtn>+</button>
                     </ng-container>
-                    <ng-container *ngIf="un">
+                    <ng-container *ngIf="un && !keyesc">
                         <button class="more" #morebtn>+</button>
                         <button class="home" #homebtn style="height: 2rem">home</button>
                         <button class="dark" #darkbtn>dark</button>
                         <button class="plume" #plumebtn>plume</button>
                     </ng-container>
-                    <ng-container *ngIf="deux">
+                    <ng-container *ngIf="deux && !keyesc">
                         <button class="more" #morebtn>+</button>
                         <button class="home" #homebtn>home</button>
                         <button class="dark" #darkbtn style="height: 2rem">dark</button>
                         <button class="plume" #plumebtn>plume</button>
                     </ng-container>
-                    <ng-container *ngIf="trois">
+                    <ng-container *ngIf="trois && !keyesc">
                         <button class="more" #morebtn>+</button>
                         <button class="home" #homebtn>home</button>
                         <button class="dark" #darkbtn>dark</button>

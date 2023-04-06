@@ -39,32 +39,51 @@ export class AppComponent {
     if (!this.arrowright) {
       this.arrowright = true;
       this.un = true;
-      
+      this.keyesc = false;
     }
     else if (this.arrowright && this.un) {
       // this.arrowright = false;
       this.un = false;
       this.deux = true;
+      this.keyesc = false;
     }
     else if (this.arrowright && this.deux) {
       // this.arrowright = false;
       this.un = false;
       this.deux = false;
       this.trois = true;
+      this.keyesc = false;
     }
   }
 
+  // TODO: same than for the right
   @HostListener('document:keydown.arrowleft', ['$event'])
   onKeyDownLeft(event: KeyboardEvent) {
     if (!this.arrowleft) {
       this.arrowleft = true;
-      this.deployed = true;
-      console.log('deployed');
     }
-    else if (this.arrowleft){
+    else if (this.arrowleft && this.un) {
+      // this.arrowleft = false;
+      this.un = false;
+      this.deux = false;
+      this.keyesc = false;
       this.arrowleft = false;
-      this.deployed = false;
-      console.log('replied');
+      
+    }
+    else if (this.arrowleft && this.deux) {
+      // this.arrowleft = false;
+      this.un = true;
+      this.deux = false;
+      this.trois = false;
+      this.keyesc = false;
+    }
+    else if (this.arrowleft && this.trois) {
+      // this.arrowleft = false;
+      this.un = false;
+      this.deux = true;
+      this.trois = false;
+      this.keyesc = false;
+      this.arrowright = false;
     }
   }
 
@@ -72,12 +91,14 @@ export class AppComponent {
   onKeyDownEsc(event: KeyboardEvent) {
     if (!this.keyesc) {
       this.keyesc = true;
-      console.log('esc');
+      this.arrowright = false;
+      this.un = false;
+      this.deux = false;
+      this.trois = false;
       
     }
     else if (this.keyesc){
       this.keyesc = false;
-      console.log('esc no more');
     }
   }
 }
