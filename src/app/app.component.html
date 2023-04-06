@@ -27,24 +27,12 @@
                     <ng-container *ngIf="(!un && !deux && !trois) || keyesc">
                         <button class="more" #morebtn>+</button>
                     </ng-container>
-                    <ng-container *ngIf="un && !keyesc">
+                    <ng-container *ngIf="active">
                         <button class="more" #morebtn>+</button>
-                        <button class="home" #homebtn style="height: 2rem">home</button>
-                        <button class="dark" #darkbtn>dark</button>
-                        <button class="plume" #plumebtn>plume</button>
-                    </ng-container>
-                    <ng-container *ngIf="deux && !keyesc">
-                        <button class="more" #morebtn>+</button>
-                        <button class="home" #homebtn>home</button>
-                        <button class="dark" #darkbtn style="height: 2rem">dark</button>
-                        <button class="plume" #plumebtn>plume</button>
-                    </ng-container>
-                    <ng-container *ngIf="trois && !keyesc">
-                        <button class="more" #morebtn>+</button>
-                        <button class="home" #homebtn>home</button>
-                        <button class="dark" #darkbtn>dark</button>
-                        <button class="plume" #plumebtn style="height: 2rem">plume</button>
-                    </ng-container>
+                        <button class="home" #homebtn [style]="un && !keyesc ? 'height: 2rem':''">home</button>
+                        <button class="dark" #darkbtn [style]="deux && !keyesc ? 'height: 2rem':''">dark</button>
+                        <button class="plume" #plumebtn [style]="trois && !keyesc ? 'height: 2rem':''">plume</button>
+                    </ng-container> 
                 </div>
             </nav>
         </div>

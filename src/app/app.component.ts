@@ -28,12 +28,46 @@ export class AppComponent {
   un: boolean = false;
   deux: boolean = false;
   trois: boolean = false;
+  active: boolean = false;
 
   @ViewChild('navbar', { static: true }) navbar: ElementRef;
   @ViewChild('morebtn', { static: true }) morebtn: ElementRef;
   @ViewChild('homebtn', { static: true }) homebtn: ElementRef;
   @ViewChild('darkbtn', { static: true }) darkbtn: ElementRef;
   @ViewChild('plumebtn', { static: true }) plumebtn: ElementRef;
+
+  @HostListener('click', ['$event.target']) onClick() {
+    if (this.navbar) {
+      // do something when navbar is clicked
+      console.log('navbar clicked');
+      this.un = true;
+      this.keyesc = false;
+      this.arrowright = true;
+      console.log(this.darkbtn);
+      this.active = true;
+    }
+    if (this.homebtn) {
+      // do something when navbar is clicked
+      console.log('home');
+      this.un = true;
+      this.keyesc = false;
+      this.arrowright = true;
+    }
+    if (this.deux) {
+      // do something when navbar is clicked
+      console.log('dark');
+      this.un = true;
+      this.keyesc = false;
+      this.arrowright = true;
+    }
+    if (this.trois) {
+      // do something when navbar is clicked
+      console.log('writing');
+      this.un = true;
+      this.keyesc = false;
+      this.arrowright = true;
+    }
+  }
 
   // on set un host listener comme un event listener 
   @HostListener('document:keydown.arrowright', ['$event'])
@@ -43,7 +77,7 @@ export class AppComponent {
       this.arrowright = true;
       this.un = true;
       this.keyesc = false;
-      console.log('a');
+      this.active = true;
     }
     else if (this.arrowright && this.un) {
       // this.arrowright = false;
@@ -74,11 +108,13 @@ export class AppComponent {
       this.arrowleft = true;
     }
     else if (this.arrowleft && this.un) {
+      this.active = true;
       this.arrowleft = false;
       this.arrowright = false;
       this.un = false;
       this.deux = false;
       this.keyesc = false;
+      this.active = false;
     }
     else if (this.arrowleft && this.deux) {
       // this.arrowleft = false;
@@ -104,7 +140,6 @@ export class AppComponent {
       this.un = false;
       this.deux = false;
       this.trois = false;
-      
     }
     else if (this.keyesc){
       this.keyesc = false;
@@ -114,7 +149,6 @@ export class AppComponent {
   onKeyDownEnter(event: KeyboardEvent) {
     if (!this.keyenter) {
       this.keyenter = true;
-      console.log('aaaaaaaaaa');
       if (this.un) {
         this.router.navigateByUrl('/home');
         this.keyenter = false;
