@@ -3,6 +3,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { SOCIALMEDIAS } from './mock-social';
 // on importe la class social qui définit quel champs aura la mock et le type de données en entrée
 import { Social } from './social';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { Social } from './social';
 export class AppComponent {
   // on conne social, un tableau vide
   social: Social[] = SOCIALMEDIAS;
+  constructor(private router: Router) {}
 
   // ici je crée la condition si l'une des flèches est pressée
   deployed: boolean = false;
@@ -22,6 +24,7 @@ export class AppComponent {
   arrowleft: boolean = false;
   arrowup: boolean = false;
   keyesc: boolean = false;
+  keyenter: boolean = false;
   un: boolean = false;
   deux: boolean = false;
   trois: boolean = false;
@@ -65,7 +68,6 @@ export class AppComponent {
     }
   }
 
-  // TODO: same than for the right
   @HostListener('document:keydown.arrowleft', ['$event'])
   onKeyDownLeft(event: KeyboardEvent) {
     if (!this.arrowleft) {
@@ -106,6 +108,24 @@ export class AppComponent {
     }
     else if (this.keyesc){
       this.keyesc = false;
+    }
+  }
+  @HostListener('document:keydown.enter', ['$event'])
+  onKeyDownEnter(event: KeyboardEvent) {
+    if (!this.keyenter) {
+      this.keyenter = true;
+      console.log('aaaaaaaaaa');
+      if (this.un) {
+        this.router.navigateByUrl('/home');
+        this.keyenter = false;
+      }
+      if (this.trois) {
+        this.router.navigateByUrl('/writing');
+        this.keyenter = false;
+      }
+    }
+    else if (this.keyenter){
+      this.keyenter = false;
     }
   }
 }
