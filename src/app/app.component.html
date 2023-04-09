@@ -24,7 +24,7 @@
 
             <nav class="navigation">
                 <div class="navbar" #navbar>
-                    <ng-container *ngIf="(!un && !deux && !trois) || keyesc">
+                    <ng-container *ngIf="(!un && !deux && !trois) || keyesc || keyenter">
                         <button class="more" #morebtn>+</button>
                     </ng-container>
                     <ng-container *ngIf="active">
