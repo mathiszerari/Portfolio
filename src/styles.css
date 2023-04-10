@@ -146,3 +146,65 @@ svg {
     align-items: center;
     display: flex;
 }
+.flex {
+    display: flex;
+}
+.mx-0\.5 {
+    margin-left: 0.125rem;
+    margin-right: 0.125rem;
+}
+*, :after, :before {
+    box-sizing: border-box;
+    border: 0 solid #e5e5e5;
+}
+.duration-200 {
+    transition-duration: .2s;
+}
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+}
+.p-3 {
+    padding: 0.75rem;
+}
+.bg-\[\#EC605A\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(236 96 90/var(--tw-bg-opacity));
+}
+.rounded-full {
+    border-radius: 9999px;
+}
+.items-center {
+    align-items: center;
+}
+.flex-col {
+    flex-direction: column;
+}
+.select-none {
+    -webkit-user-select: none;
+    user-select: none;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.flex {
+    display: flex;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+.more-active {
+    transform: scale(1) rotate(45deg) translateZ(0px);
+    padding: 0.75rem;
+    border-radius: 9999px;
+}
+.p-3 {
+    padding: 0.75rem;
+}
+.bg-\[\#EC605A\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(236 96 90/var(--tw-bg-opacity));
+}

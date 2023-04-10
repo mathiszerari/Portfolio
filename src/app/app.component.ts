@@ -31,42 +31,6 @@ export class AppComponent {
   active: boolean = false;
 
   @ViewChild('navbar', { static: true }) navbar: ElementRef;
-  @ViewChild('morebtn', { static: true }) morebtn: ElementRef;
-  @ViewChild('homebtn', { static: true }) homebtn: ElementRef;
-  @ViewChild('darkbtn', { static: true }) darkbtn: ElementRef;
-  @ViewChild('plumebtn', { static: true }) plumebtn: ElementRef;
-
-  // @HostListener('click', ['$event.target']) onClick() {
-  //   if (this.navbar) {
-  //     // do something when navbar is clicked
-  //     console.log('navbar clicked');
-  //     this.un = true;
-  //     this.keyesc = false;
-  //     this.arrowright = true;
-  //     this.active = true;
-  //   }
-  //   if (this.homebtn) {
-  //     // do something when navbar is clicked
-  //     console.log('home');
-  //     this.un = true;
-  //     this.keyesc = false;
-  //     this.arrowright = true;
-  //   }
-  //   if (this.deux) {
-  //     // do something when navbar is clicked
-  //     console.log('dark');
-  //     this.un = true;
-  //     this.keyesc = false;
-  //     this.arrowright = true;
-  //   }
-  //   if (this.trois) {
-  //     // do something when navbar is clicked
-  //     console.log('writing');
-  //     this.un = true;
-  //     this.keyesc = false;
-  //     this.arrowright = true;
-  //   }
-  // }
 
   // on set un host listener comme un event listener 
   @HostListener('document:keydown.arrowright', ['$event'])
