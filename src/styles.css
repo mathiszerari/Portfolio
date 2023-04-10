@@ -114,12 +114,35 @@ svg {
 .navigation {
     background-color: #171717;
     box-shadow: none;
+    left: 1.5rem;
+    z-index: 50;
+    bottom: 1rem;
+    position: fixed;
 }
 .more {
-    text-align: center;
-    padding: 2rem;
-    width: 3rem;
-    height: 3rem; 
-    cursor: pointer;
+    transform: none;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    padding: 0.85rem;
+    border-radius: 9999px;
     border: 0 solid #e5e5e5;
+} 
+.more:focus {
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+}
+.dark .dark\:text-black {
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0/var(--tw-text-opacity));
+}
+.w-6 {
+    width: 1.5rem;
+}
+.h-6 {
+    height: 1.5rem;
+    display: block;
+    vertical-align: middle;
+}
+.navbar {
+    align-items: center;
+    display: flex;
 }
