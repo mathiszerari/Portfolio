@@ -29,6 +29,8 @@ export class AppComponent {
   deux: boolean = false;
   trois: boolean = false;
   active: boolean = false;
+  light: boolean = false;
+
 
   @ViewChild('navbar', { static: true }) navbar: ElementRef;
 
