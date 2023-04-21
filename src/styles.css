@@ -19,6 +19,9 @@ h2 {
     flex-direction: row;
     display: flex;
     font-style: normal;
+    animation-name: slidein;
+    animation-duration: 1s;
+    margin-top: 10%;
 }
 
 .logo {
@@ -71,7 +74,6 @@ h1 {
     color: hsla(0,0%,100%,.6);
     margin: 0;
     display: block;
-    margin-top: 4rem;
 }
 .twitter {
     margin-top: 1rem;
@@ -212,4 +214,28 @@ a {
 }
 .p-4 {
     padding: 1rem;
+}
+
+@keyframes slidein {
+    0% {
+        margin-top: 0%;
+    }
+    100% {
+        margin-top: 10%;
+    }
+}
+@keyframes slideaboutme {
+    0% {
+        margin-top: 0rem;
+    }
+    100% {
+        margin-top: 4rem;
+    }
+}
+
+.aboutme {
+    animation-name: slideaboutme;
+    animation-duration: 1s;
+    animation-delay: 0.75s;
+    margin-top: 4rem;
 }
