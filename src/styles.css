@@ -21,7 +21,8 @@ h2 {
     font-style: normal;
     animation-name: slidein;
     animation-duration: 1s;
-    margin-top: 10%;
+    margin-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .logo {
@@ -221,7 +222,7 @@ a {
         margin-top: 0%;
     }
     100% {
-        margin-top: 10%;
+        margin-top: 4rem;
     }
 }
 @keyframes slideaboutme {
