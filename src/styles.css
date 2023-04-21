@@ -263,13 +263,18 @@ a {
 }
 .footer {
     color: hsla(0,0%,100%,.4);
-    text-align: center;
-    position: fixed;
-    display: block;
-    bottom: 5rem;
-    margin-left: 20%;
-    margin-right: 20%;
 }
 .text-sm {
     font-size: 1rem;
+}
+
+footer {
+    padding: 1rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: fixed;
+    text-align: center;
+    bottom: 5rem;
 }
