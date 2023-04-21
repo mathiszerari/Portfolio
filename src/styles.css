@@ -3,6 +3,9 @@ Je ne comprends pas encore à quoi servent les directives si l'on a un fichier g
 body{
     background-color: #171717;
 } 
+html {
+    line-height: 1.5;
+}
 h2 {
     font-size: inherit;
     font-weight: inherit;
@@ -11,6 +14,9 @@ h2 {
     margin-left: 0;
     margin-right: 0;
     padding: 1rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header {
@@ -57,13 +63,17 @@ img {
 }
 h1 {
     margin: 0;
-    font-size: inherit;
+    font-size: 1.25rem;
     tab-size: 4;
-    font-weight: inherit;
+    display: block;
+    margin-block-start: 0.25em;
+    margin-block-end: 0.25em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 .status{
     color: hsla(0,0%,100%,.4);
-    font-size: inherit;
+    font-size: 1.15rem;
     line-height: inherit;
     tab-size: 4;
     margin: 0;
@@ -71,10 +81,16 @@ h1 {
 .row {
     gap: 1rem;
 }
-.subtitle {
+.subtitle1 {
     color: hsla(0,0%,100%,.6);
     margin: 0;
     display: block;
+}
+.subtitle2 {
+    color: hsla(0,0%,100%,.6);
+    margin: 0;
+    display: block;
+    padding-bottom: 1rem;
 }
 .twitter {
     margin-top: 1rem;
@@ -147,6 +163,9 @@ svg {
 .navbar {
     align-items: center;
     display: flex;
+}
+nav {
+    width: 45px;
 }
 .flex {
     display: flex;
@@ -241,4 +260,16 @@ a {
     animation-name: slideaboutme;
     animation-duration: 1.75s;
     margin-top: 4rem;
+}
+.footer {
+    color: hsla(0,0%,100%,.4);
+    text-align: center;
+    position: fixed;
+    display: block;
+    bottom: 5rem;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.text-sm {
+    font-size: 1rem;
 }
