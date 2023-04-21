@@ -30,9 +30,11 @@ export class AppComponent {
   trois: boolean = false;
   active: boolean = false;
   light: boolean = false;
+  clicked: boolean = false;
 
 
   @ViewChild('navbar', { static: true }) navbar: ElementRef;
+  @ViewChild('more', { static: false }) more: ElementRef;
 
   // on set un host listener comme un event listener 
   @HostListener('document:keydown.arrowright', ['$event'])
@@ -126,6 +128,24 @@ export class AppComponent {
         this.active = false;
         this.trois = false;
       }
+    }
+  }
+  moreButtons() { 
+    if (!this.clicked) {
+      console.log('Le bouton a été cliqué !');
+      this.un = true;
+      this.keyesc = false;
+      this.active = true;
+      this.clicked = true;
+    } else {
+      this.active = true;
+      this.arrowleft = false;
+      this.arrowright = false;
+      this.un = false;
+      this.deux = false;
+      this.keyesc = false;
+      this.active = false;
+      this.clicked = false;
     }
   }
 }

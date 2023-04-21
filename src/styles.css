@@ -167,7 +167,7 @@ svg {
     transition-duration: .15s;
 }
 .p-3 {
-    padding: 0.75rem;
+    padding: 0.85rem;
 }
 .bg-\[\#EC605A\] {
     --tw-bg-opacity: 1;
@@ -198,13 +198,16 @@ a {
 }
 .more-active {
     transform: scale(1) rotate(45deg) translateZ(0px);
-    padding: 0.75rem;
+    padding: 0.85rem;
     border-radius: 9999px;
-}
-.p-3 {
-    padding: 0.75rem;
 }
 .bg-\[\#EC605A\] {
     --tw-bg-opacity: 1;
     background-color: rgb(236 96 90/var(--tw-bg-opacity));
+}
+.more-active:focus{
+    background-color: #e5e5e5;
+}
+.light:focus{
+    background-color: #e5e5e5;
 }
