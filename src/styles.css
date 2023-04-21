@@ -140,7 +140,6 @@ svg {
 .h-6 {
     height: 1.5rem;
     display: block;
-    vertical-align: middle;
 }
 .navbar {
     align-items: center;
