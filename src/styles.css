@@ -228,6 +228,9 @@ a {
     0% {
         margin-top: 0rem;
     }
+    25% {
+        margin-top: 0rem;
+    }
     100% {
         margin-top: 4rem;
     }
@@ -235,7 +238,6 @@ a {
 
 .aboutme {
     animation-name: slideaboutme;
-    animation-duration: 1s;
-    animation-delay: 0.75s;
+    animation-duration: 1.75s;
     margin-top: 4rem;
 }
