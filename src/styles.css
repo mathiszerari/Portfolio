@@ -211,3 +211,6 @@ a {
 .light:focus{
     background-color: #e5e5e5;
 }
+.p-4 {
+    padding: 1rem;
+}

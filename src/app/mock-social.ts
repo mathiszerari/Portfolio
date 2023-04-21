@@ -19,6 +19,6 @@ export const SOCIALMEDIAS: Social[] = [
     {
         media: "Email",
         arobase: "mathiszerari[at]icloud(dot)com",
-        link: "mailto:mathis.zerari@icloud.com"
+        link: "mailto:mathiszerari@icloud.com"
     }
 ]
