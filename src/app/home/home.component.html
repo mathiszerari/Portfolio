@@ -3,7 +3,7 @@
     <!-- dans un row on boucle avec ngFor qui boucle sur des éléments HTML, ici pour chaque réseaux présent 
         dans le tableau social et la classe correspond aux dimensions que prendront chaque div : lorsque la taille de l'écran
         sera moyen ce sera 3/12 et pour un petit de 10 (pour prendre toute la rangée)-->
-    <div *ngFor="let socialmedia of social" [ngClass]="socialmedia.media | lowercase"  class="col m6 s12 l3 div">
+    <div *ngFor="let socialmedia of social" [ngClass]="socialmedia.media | lowercase"  class="col m4 s12 div">
         <span>
             <!-- ici on place dans un h4 la valeur contenue dans la mock au champ media -->
             <p class="text-quarternary">{{ socialmedia.media }}</p>

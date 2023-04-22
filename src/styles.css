@@ -269,12 +269,12 @@ a {
 }
 
 footer {
+    margin-top: 5rem;
     padding: 1rem;
     max-width: 42rem;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    position: fixed;
     text-align: center;
     bottom: 5rem;
 }
