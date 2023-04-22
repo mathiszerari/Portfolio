@@ -269,10 +269,11 @@ a {
 }
 
 footer {
-    margin-top: 5rem;
+    margin-top: 6rem;
     padding: 1rem;
     max-width: 42rem;
     margin-left: auto;
+    min-height: 95%;
     margin-right: auto;
     display: block;
     text-align: center;
