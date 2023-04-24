@@ -279,3 +279,11 @@ footer {
     text-align: center;
     bottom: 5rem;
 }
+
+.space {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+.all-writing {
+    margin-top: 4rem;
+}
