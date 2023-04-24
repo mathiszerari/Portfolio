@@ -11,7 +11,7 @@
 
 
 <div class="row">
-    <p class="subtitle1">Contact</p>
+    <p class="subtitle1 stay">Contact</p>
     <!-- dans un row on boucle avec ngFor qui boucle sur des éléments HTML, ici pour chaque réseaux présent 
         dans le tableau social et la classe correspond aux dimensions que prendront chaque div : lorsque la taille de l'écran
         sera moyen ce sera 3/12 et pour un petit de 10 (pour prendre toute la rangée)-->
@@ -21,7 +21,7 @@
             <p class="text-quarternary">{{ socialmedia.media }}</p>
             <!-- on place dans un a le liens présent dans la mock au champ link, que l'on ouvrira dans un nouvel onglet au click
             on place le arobase entre les balises et le link en href -->
-            <a href="{{ socialmedia.link }}" target="_blank">{{ socialmedia.arobase }}
+            <a href="{{ socialmedia.link }}" target="_blank"class="link">{{ socialmedia.arobase }}
                 <svg class=" inline-block h-3 w-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
@@ -32,7 +32,7 @@
 
 <div class="aboutme" id="test">
     <p class="subtitle2">About me</p>
-    <p>Develop applications that combine aesthetics, minimalism and user experience. Concerned with developing tools at the crossroads of design and engineering, creating intuitive and pleasant interfaces.
+    <p class="whity">Develop applications that combine aesthetics, minimalism and user experience. Concerned with developing tools at the crossroads of design and engineering, creating intuitive and pleasant interfaces.
         I am based in Paris and developing projects that make sense to me. <br><br>
         
         I am currently studying computer science and I am passionate about reading, writing, productivity and constant learning. I am currently interested in Javascript technologies and experimenting with native applications with Swift. I am also able to generate new experiences with Figma, which allows me to create user interfaces.
