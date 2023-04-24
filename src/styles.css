@@ -1,8 +1,24 @@
 /* You can add global styles to this file, and also import other style files 
 Je ne comprends pas encore à quoi servent les directives si l'on a un fichier global pour les styles css */
-body{
-    background-color: #171717;
-} 
+
+/* Light mode */
+:root.dark {
+    --background-color: #171717;
+    --text-color: #fff;
+}
+  
+
+/* Dark mode */
+:root.light {
+    --background-color: #fff;
+    --text-color: #171717;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
 html {
     line-height: 1.5;
 }

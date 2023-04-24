@@ -15,7 +15,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   // on conne social, un tableau vide
   social: Social[] = SOCIALMEDIAS;
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
+  
 
   // ici je crée la condition si l'une des flèches est pressée
   deployed: boolean = false;
@@ -30,10 +31,20 @@ export class AppComponent {
   trois: boolean = false;
   active: boolean = false;
   light: boolean = false;
+  night: boolean = true;
   clicked: boolean = false;
+  lightmode: boolean = false;
+  
+
+  rootElement = document.documentElement;
+
+  ngOnInit() {
+    this.rootElement.classList.add('dark');
+  }
 
 
   @ViewChild('navbar', { static: true }) navbar: ElementRef;
+  @ViewChild('html', { static: true }) html: ElementRef;
   @ViewChild('more', { static: false }) more: ElementRef;
 
   // on set un host listener comme un event listener 
@@ -147,5 +158,21 @@ export class AppComponent {
       this.active = false;
       this.clicked = false;
     }
+  }
+
+  lightMode() {
+    console.log('light mode on')
+    this.light = true;
+    this.night = false;
+    this.rootElement.classList.add('light');
+    this.rootElement.classList.remove('dark');
+  }
+  
+  nightMode() {
+    console.log('night mode on')
+    this.light = false;
+    this.night = true;
+    this.rootElement.classList.remove('light');
+    this.rootElement.classList.add('dark');
   }
 }
