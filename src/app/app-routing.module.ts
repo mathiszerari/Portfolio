@@ -6,6 +6,7 @@ import { WritingComponent } from './writing/writing.component';
 const routes: Routes = [
   { path: 'writing', component: WritingComponent },
   { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home', pathMatch: 'full' } // Redirige tout vers la page d'accueil sauf si le chemin est "writing"
 ];
 

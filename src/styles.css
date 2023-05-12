@@ -419,9 +419,9 @@ p {
 }
 
 .nav-item a {
-    --background: #EFEFEF;
+    background: #EFEFEF;
 }
 
 .more:focus{
-    --background: #EFEFEF;
+    background: #EFEFEF;
 }
