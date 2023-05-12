@@ -5,12 +5,14 @@ Je ne comprends pas encore à quoi servent les directives si l'on a un fichier g
 :root.dark {
     --background-color: #171717;
     --color: hsla(0, 0%, 100%, .8);
+    --background: #EFEFEF;
 }
 
 /* Dark mode */
 :root.light {
     --background-color: #fff;
     --color: rgba(0, 0, 0, .8);
+    --background: #EFEFEF;
 }
 
 body {
@@ -410,4 +412,12 @@ span {
 
 p {
     color: var(--color) !important;
+}
+
+.nav-item {
+    padding: 0 0.5rem;
+}
+
+.nav-item a {
+    background: var(--background);
 }

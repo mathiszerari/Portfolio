@@ -47,9 +47,9 @@
                     </button>
 
                     <!-- button home -->
-                    <div class="flex space-x-2">
-                        <div class="mx-0.5" tabindex="-1"
-                            style="-webkit-tap-highlight-color: transparent; opacity: 1; transform: none;">
+                    <div class="flex space-x-2 nav-item">
+                        <div class="mx-0.5 rounded-full" tabindex="-1"
+                            style="-webkit-tap-highlight-color: transparent; opacity: 1; transform: none; background: white;">
                             <a class="flex h-10 w-10 cursor-pointer select-none flex-col items-center space-y-1 p-3 transition-all duration-200 rounded-full"
                                 tabindex="1" href="/">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -65,7 +65,7 @@
                         </div>
 
                         <!-- button pencil -->
-                        <div class="mx-0.5" tabindex="-1"
+                        <!-- <div class="mx-0.5" tabindex="-1"
                             style="-webkit-tap-highlight-color: transparent; opacity: 1; transform: none;">
                             <a class="flex h-10 w-10 cursor-pointer select-none flex-col items-center space-y-1 p-3 transition-all duration-200 rounded-full bg-[#F7D358]"
                                 tabindex="2" href="/writing">
@@ -76,12 +76,12 @@
                                     </path>
                                 </svg>
                             </a>
-                        </div>
+                        </div> -->
 
                         <!-- twitter svg -->
-                        <div class="mx-0.5" tabindex="-1"
-                            style="-webkit-tap-highlight-color: transparent; opacity: 1; transform: none;">
-                            <a class="flex h-10 w-10 cursor-pointer select-none flex-col items-center space-y-1 p-3 transition-all duration-200 rounded-full bg-[#63C7FA]"
+                        <div class="mx-0.5 nav-item  rounded-full " tabindex="-1"
+                            style=" -webkit-tap-highlight-color: transparent; opacity: 1; transform: none;">
+                            <a class="flex h-10 w-10 cursor-pointer select-none flex-col items-center space-y-1 p-3 transition-all duration-200 rounded-full "
                                 tabindex="3" target="_blank" href="https://twitter.com/mathiszerari">
                                 <svg class="h-6 w-6 text-[#102E62]" fill="none" height="16" viewBox="0 0 15 15"
                                     width="16" xmlns="http://www.w3.org/2000/svg">
@@ -93,7 +93,7 @@
                         </div>
 
                         <!-- sun svg -->
-                        <div *ngIf="night" class="mx-0.5" tabindex="-1">
+                        <div *ngIf="night" class="mx-0.5 nav-item" tabindex="-1">
                             <button (click)="lightMode()"
                                 class="flex h-10 w-10 cursor-pointer select-none flex-col items-center space-y-1 p-3 transition-all duration-200 rounded-full"
                                 tabindex="4">
@@ -107,7 +107,7 @@
                         </div>
 
                         <!-- moon svg -->
-                        <div *ngIf="light" class="mx-0.5" tabindex="-1">
+                        <div *ngIf="light" class="mx-0.5 nav-item" tabindex="-1">
                             <button (click)="nightMode()"
                                 class="flex h-10 w-10 cursor-pointer select-none flex-col items-center space-y-1 p-3 transition-all duration-200 rounded-full"
                                 tabindex="4">
