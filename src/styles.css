@@ -2,6 +2,11 @@
 Je ne comprends pas encore à quoi servent les directives si l'on a un fichier global pour les styles css */
 
 /* Light mode */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root.dark {
     --background-color: #171717;
     --color: hsla(0, 0%, 100%, .8);
@@ -424,4 +429,16 @@ p {
 
 .more:focus{
     background: #EFEFEF;
+}
+
+.email-btn {
+    margin: auto;
+    text-align: center;
+    width: 40%;
+    padding: 2% 0%;
+    border-radius: 75px;
+    background-color: #77a9ec;
+}
+.text-email {
+    color: var(--color)!important;
 }
