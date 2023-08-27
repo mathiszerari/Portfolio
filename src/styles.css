@@ -9,6 +9,7 @@ Je ne comprends pas encore à quoi servent les directives si l'on a un fichier g
 
 :root.dark {
     --background-color: #171717;
+    --button-color: #000000;
     --color: hsla(0, 0%, 100%, .8);
     --background: #EFEFEF;
 }
@@ -16,6 +17,7 @@ Je ne comprends pas encore à quoi servent les directives si l'on a un fichier g
 /* Dark mode */
 :root.light {
     --background-color: #fff;
+    --button-color: #ffffff;
     --color: rgba(0, 0, 0, .8);
     --background: #EFEFEF;
 }
@@ -334,6 +336,7 @@ nav {
     animation-name: slideaboutme;
     animation-duration: 1.75s;
     margin-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .text-sm {
@@ -432,6 +435,7 @@ p {
 }
 
 .email-btn {
+    background-color: #77a9ec;
     margin: auto;
     text-align: center;
     width: 40%;
