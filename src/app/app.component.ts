@@ -40,6 +40,20 @@ export class AppComponent {
 
   ngOnInit() {
     this.rootElement.classList.add('dark');
+
+    const modeStocke = localStorage.getItem("mode");
+
+    console.log(localStorage);
+    
+
+    if (modeStocke == "light") {
+      console.log('light mode on')
+      localStorage.setItem("mode", "light");
+      this.light = true;
+      this.night = false;
+      this.rootElement.classList.add('light');
+      this.rootElement.classList.remove('dark');
+    }
   }
 
 
@@ -162,6 +176,7 @@ export class AppComponent {
 
   lightMode() {
     console.log('light mode on')
+    localStorage.setItem("mode", "light");
     this.light = true;
     this.night = false;
     this.rootElement.classList.add('light');
@@ -173,6 +188,7 @@ export class AppComponent {
     this.light = false;
     this.night = true;
     this.rootElement.classList.remove('light');
+    localStorage.setItem("mode", "night");
     this.rootElement.classList.add('dark');
   }
 }
