@@ -343,8 +343,8 @@ nav {
     font-size: 1rem;
 }
 
-footer {
-    margin-top: 6rem;
+.footer {
+    margin-top: 3rem;
     padding: 1rem;
     max-width: 42rem;
     margin-left: auto;
@@ -438,11 +438,18 @@ p {
     background-color: #77a9ec;
     margin: auto;
     text-align: center;
-    width: 40%;
+    width: 50%;
     padding: 2% 0%;
     border-radius: 75px;
     background-color: #77a9ec;
 }
 .text-email {
     color: var(--color)!important;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+.buy {
+    margin-top: -13.5rem;
 }
