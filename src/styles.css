@@ -408,3 +408,6 @@ p {
 .buy {
     margin-top: -15.5rem;
 }
+.svg-sung {
+    z-index: 999999;
+}
