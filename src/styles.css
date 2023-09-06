@@ -295,7 +295,7 @@ nav {
     --tw-bg-opacity: 1;
 }
 
-.more-active:focus {
+.more-active {
     background-color: #e5e5e5;
 }
 
@@ -373,51 +373,6 @@ span {
     /* color: hsla(0, 0%, 100%, .6) !important; */
     color: var(--color);
 }
-
-.rounded-full {
-    color: #77a9ec !important;
-}
-
-
-
-/* @media (prefers-color-scheme: dark) {
-    .subtitle2 {
-        color: hsla(0, 0%, 100%, .8);
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: #f5f5f5;
-        color: #333;
-    }
-
-    .navigation {
-        background: #171717 !important;
-    }
-
-    footer span {
-        color: rgba(0,0,0,.4) !important;
-    }
-
-    footer a {
-        color: rgba(0,0,0,.4) !important;
-    }
-
-    p {
-        color: rgba(0,0,0,.4) !important;
-    }
-
-    .subtitle2-day {
-        color: red;
-        color: rgba(0,0,0,.6);
-    }
-
-    .text-quarternary {
-        color: rgba(0,0,0,.6);
-    }
-} */
-
 p {
     color: var(--color) !important;
 }
@@ -451,5 +406,5 @@ p {
 }
 
 .buy {
-    margin-top: -13.5rem;
+    margin-top: -15.5rem;
 }
