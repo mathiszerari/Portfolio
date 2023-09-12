@@ -182,7 +182,7 @@ svg {
 }
 
 .navigation {
-    background-color: var(--background-color);
+    background-color: '';
     box-shadow: none;
     left: 1.5rem;
     z-index: 50;
@@ -296,6 +296,9 @@ nav {
 }
 
 .more-active {
+    background-color: #e5e5e5;
+}
+.more-active:active {
     background-color: #e5e5e5;
 }
 
